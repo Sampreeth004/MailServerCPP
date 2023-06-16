@@ -40,7 +40,7 @@ void MainMenu() //MainMenu of the email
         MainMenu();
         break;
         case 99:
-        cout<<"Exitting!! \n";
+        cout<<"Thank you for using our mail service,Exitting!! \n";
         break;
         default:
         cout<<"Invalid choice, run the program again! \n";
@@ -144,6 +144,7 @@ void LoggedInMenu(string userName)
     switch (choice)
     {
     case 1:
+        cout<<endl;
         ShowInbox(userName);
         LoggedInMenu(userName);
     break;
@@ -252,7 +253,10 @@ void ShowInbox(string userName)
         if(c==3)
             cout<<"Subject: "+line+'\n';
         if(c==4)
+        {
             cout<<"Message: "+line+'\n';
+            cout<<endl;
+        }
         c++;
     }
     file.close();
